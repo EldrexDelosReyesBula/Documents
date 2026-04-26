@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Terms of Use | LanTrack · Offline-first OJT Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Cosmic orange tint — warm deep space meets sunset nebula */
+            background: linear-gradient(145deg, #fff6ed 0%, #ffe9db 100%);
+            color: #2c1b0f;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header — translucent warmth with cosmic edge */
+        .app-header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 242, 232, 0.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(230, 126, 34, 0.2);
+            padding: 0.75rem 1.5rem;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .back-btn {
+            background: transparent;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #b45a2b;
+            font-size: 1.1rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(230, 126, 34, 0.12);
+            transform: scale(0.96);
+            color: #c35f24;
+        }
+
+        .back-btn:active {
+            transform: scale(0.94);
+        }
+
+        .header-title {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: -0.2px;
+            color: #c35f24;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Main content — soft cosmic warmth */
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+            flex: 1;
+        }
+
+        /* Typography — deep charcoal with orange nuance */
+        h1,
+        h2,
+        h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #d45f1a, #b6450e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .effective-date {
+            font-size: 0.85rem;
+            color: #b45a2b;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            border-left: 3px solid #f1a45c;
+            padding-left: 0.75rem;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+            color: #3a281b;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 400;
+            padding: 1rem 1.2rem;
+        }
+
+        .intro-text strong {
+            font-weight: 600;
+            color: #c35f24;
+        }
+
+        /* Section styling with warm tones */
+        .policy-section {
+            margin-bottom: 2.2rem;
+        }
+
+        .policy-section h2 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #bc571e;
+            letter-spacing: -0.3px;
+        }
+
+        .policy-section p {
+            font-size: 0.95rem;
+            color: #2f241b;
+            line-height: 1.65;
+            margin-bottom: 0.75rem;
+        }
+
+        .policy-section .sub-note {
+            font-size: 0.9rem;
+            color: #b25421;
+            margin-top: 0.25rem;
+        }
+
+        /* List styling — dusted orange embers */
+        .simple-list {
+            margin: 0.75rem 0 0.5rem 1.25rem;
+            list-style: none;
+        }
+
+        .simple-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #2f241b;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .simple-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #e68946;
+        }
+
+        .bullet-list {
+            margin: 0.75rem 0 0.5rem 1.25rem;
+            list-style: none;
+        }
+
+        .bullet-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #2f241b;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e68946;
+            font-weight: bold;
+        }
+
+        /* warning / notice box — cosmic orange alert */
+        .notice-warning {
+            background: rgba(255, 225, 195, 0.7);
+            padding: 0.9rem 1rem;
+            margin: 1rem 0 1.2rem 0;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: #572e12;
+            backdrop-filter: blur(2px);
+        }
+
+        .notice-warning i {
+            color: #e67e22;
+            font-size: 1.2rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .notice-warning .notice-content {
+            flex: 1;
+        }
+
+        /* callout info — gentle cosmic nebula */
+        .callout-info {
+            background: rgba(255, 215, 180, 0.6);
+            padding: 0.8rem 1rem;
+            margin: 1rem 0 1rem 0;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .callout-info i {
+            color: #e6832d;
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+
+        .callout-info p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Horizontal rule — glowing ember */
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #ffc48a, #e9a06a, #ffc48a);
+        }
+
+        /* closing statement */
+        .closing-statement {
+            margin-top: 2.5rem;
+            padding-top: 0.5rem;
+            background: rgba(255, 239, 222, 0.4);
+            padding: 1rem 1.2rem;
+            border-radius: 24px;
+            border: 1px solid #f7cfaa;
+        }
+
+        .closing-statement p {
+            font-size: 1rem;
+            color: #3b2a1d;
+            font-weight: 450;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .closing-statement .signature {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            color: #bf621f;
+        }
+
+        /* Contact link styling */
+        .contact-link {
+            color: #d4641c;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-link:hover {
+            opacity: 0.7;
+            text-decoration: none;
+            color: #bc490b;
+        }
+
+        /* Ethical note emphasis */
+        .ethical-note {
+            font-weight: 500;
+            color: #ad4b14;
+            background: rgba(255, 223, 186, 0.6);
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        /* offline first badge (cosmic) */
+        .offline-badge {
+            display: inline-block;
+            background: #e67e2210;
+            border-radius: 40px;
+            padding: 0.2rem 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #b1531a;
+            border: 1px solid #f0bc8a;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* ===== FOOTER STYLES — COSMIC WARMTH ===== */
+        .site-footer {
+            width: 100%;
+            margin-top: auto;
+            padding: 1.8rem 1.5rem 2rem;
+            background: rgba(255, 242, 232, 0.92);
+            border-top: 1px solid rgba(230, 126, 34, 0.2);
+            backdrop-filter: blur(4px);
+        }
+
+        .footer-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, filter 0.2s;
+            outline: none;
+            filter: drop-shadow(0 2px 4px rgba(190, 80, 20, 0.1));
+        }
+
+        .footer-logo-link:focus-visible {
+            outline: 2px solid #e67e22;
+            outline-offset: 4px;
+            border-radius: 12px;
+        }
+
+        .footer-logo-link:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 4px 8px rgba(200, 80, 20, 0.2));
+        }
+
+        .footer-logo-img {
+            max-width: 100px;
+            width: 100%;
+            height: auto;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+            display: block;
+        }
+
+        .footer-logo-link:hover .footer-logo-img {
+            opacity: 1;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.75rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #b45a2b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            letter-spacing: 0.2px;
+        }
+
+        .footer-links a:hover {
+            color: #c35f1f;
+        }
+
+        .footer-links .divider {
+            color: #e6aa7a;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 1.5rem 1.25rem 2.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+            .footer-logo-img {
+                max-width: 70px;
+            }
+        }
+
+        ::selection {
+            background: #f8bc8c;
+            color: #2d1a0c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="app-header">
+        <button class="back-btn" id="backBtn" aria-label="Go back">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="header-title">Terms of Use</div>
+    </header>
+
+    <main class="page">
+        <h1>Terms and Conditions <span style="font-size: 1.8rem;">for LanTrack</span></h1>
+        <div class="effective-date">Effective Date: April 24, 2026 · Cosmic Orange Edition</div>
+
+        <div class="intro-text">
+            <i class="fas fa-gavel" style="color:#e67e22; margin-right: 8px;"></i>
+            These Terms and Conditions (“Terms”) govern your use of the LanTrack application (“App”, “Service”), developed by LanDecs (“we”, “us”, or “our”). By installing or using LanTrack, you agree to be bound by these Terms. If you do not agree, you must discontinue use of the App.
+        </div>
+
+        <hr>
+
+        <!-- 1. Acceptance of Terms -->
+        <div class="policy-section">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using LanTrack, you confirm that:</p>
+            <ul class="simple-list">
+                <li>You are at least 13 years old or have legal guardian consent</li>
+                <li>You have read, understood, and agreed to these Terms</li>
+                <li>You agree to comply with all applicable laws and regulations</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 2. Description of Service -->
+        <div class="policy-section">
+            <h2>2. Description of Service</h2>
+            <p>LanTrack is an offline-first productivity and OJT tracking application that provides:</p>
+            <ul class="simple-list">
+                <li>Time tracking (check-in/check-out sessions)</li>
+                <li>Task management tools</li>
+                <li>Journaling and reflection features</li>
+                <li>Automation and scheduling tools</li>
+                <li>Local data backup and restore functionality</li>
+            </ul>
+            <p>The Service is provided “as is” and may be updated, modified, or discontinued at any time.</p>
+        </div>
+
+        <hr>
+
+        <!-- 3. License to Use -->
+        <div class="policy-section">
+            <h2>3. License to Use</h2>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+            <ul class="simple-list">
+                <li>Install and use the App on your personal device</li>
+                <li>Use the features strictly for personal productivity or educational purposes</li>
+            </ul>
+            <p><strong>You may NOT:</strong></p>
+            <ul class="simple-list">
+                <li>Reverse engineer, decompile, or modify the App</li>
+                <li>Distribute, resell, or sublicense the App</li>
+                <li>Use the App for illegal, harmful, or unauthorized purposes</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 4. User Responsibilities -->
+        <div class="policy-section">
+            <h2>4. User Responsibilities</h2>
+            <p>You are solely responsible for:</p>
+            <ul class="simple-list">
+                <li>Maintaining the security of your device</li>
+                <li>Backing up your own data</li>
+                <li>Ensuring correct usage of tracking features</li>
+                <li>Any data entered into the App</li>
+            </ul>
+            <p>LanTrack does not validate, verify, or audit user-generated content.</p>
+        </div>
+
+        <hr>
+
+        <!-- 5. Data Ownership -->
+        <div class="policy-section">
+            <h2>5. Data Ownership</h2>
+            <p>All data created within LanTrack remains fully owned by you. This includes:</p>
+            <ul class="simple-list">
+                <li>Time logs</li>
+                <li>Journal entries</li>
+                <li>Tasks and schedules</li>
+                <li>Automation configurations</li>
+            </ul>
+            <div class="callout-info">
+                <p><strong>We do not claim ownership over your data.</strong> Your information stays yours — always.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 6. Offline Operation -->
+        <div class="policy-section">
+            <h2>6. Offline Operation</h2>
+            <p>LanTrack operates primarily offline.</p>
+            <ul class="simple-list">
+                <li>No user data is transmitted to external servers</li>
+                <li>No cloud synchronization is performed by default</li>
+                <li>All processing occurs locally on the device</li>
+            </ul>
+            <p>Any data sharing occurs only if initiated manually by the user (e.g., exporting files).</p>
+        </div>
+
+        <hr>
+
+        <!-- 7. Automation Disclaimer -->
+        <div class="policy-section">
+            <h2>7. Automation Disclaimer</h2>
+            <p>LanTrack may include automation features such as:</p>
+            <ul class="simple-list">
+                <li>Scheduled check-ins or reminders</li>
+                <li>Suggested logging activities</li>
+            </ul>
+            <p>You acknowledge that:</p>
+            <ul class="simple-list">
+                <li>Automation is optional and user-controlled</li>
+                <li>Automated actions may not always reflect real-world accuracy</li>
+                <li>You are responsible for reviewing and correcting logs</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 8. Backup and Data Loss -->
+        <div class="policy-section">
+            <h2>8. Backup and Data Loss</h2>
+            <p>LanTrack provides local backup tools; however:</p>
+            <ul class="simple-list">
+                <li>We do not guarantee prevention of data loss</li>
+                <li>Users are responsible for creating backups</li>
+                <li>Data loss may occur due to device failure, corruption, or deletion</li>
+            </ul>
+            <div class="notice-warning">
+                <div class="notice-content">
+                    <strong>Important:</strong> We are not liable for any loss of data under any circumstances.
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 9. Prohibited Uses -->
+        <div class="policy-section">
+            <h2>9. Prohibited Uses</h2>
+            <p>You agree NOT to use LanTrack for:</p>
+            <ul class="simple-list">
+                <li>Illegal tracking or falsification of time records</li>
+                <li>Fraudulent reporting of attendance or hours</li>
+                <li>Attempting to exploit or bypass app security</li>
+                <li>Interfering with normal app functionality</li>
+            </ul>
+            <p>Violation may result in termination of usage rights.</p>
+        </div>
+
+        <hr>
+
+        <!-- 10. Intellectual Property -->
+        <div class="policy-section">
+            <h2>10. Intellectual Property</h2>
+            <p>All rights, titles, and interests in LanTrack, including but not limited to:</p>
+            <ul class="simple-list">
+                <li>Source code</li>
+                <li>UI/UX design</li>
+                <li>Branding and logos</li>
+                <li>System architecture</li>
+            </ul>
+            <p>are owned by LanDecs unless otherwise stated.</p>
+        </div>
+
+        <hr>
+
+        <!-- 11. Third-Party Components -->
+        <div class="policy-section">
+            <h2>11. Third-Party Components</h2>
+            <p>LanTrack may include open-source libraries or third-party components. These are governed by their respective licenses, which may be provided within the application or documentation.</p>
+        </div>
+
+        <hr>
+
+        <!-- 12. Limitation of Liability -->
+        <div class="policy-section">
+            <h2>12. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law:</p>
+            <ul class="simple-list">
+                <li>LanTrack is provided "as is" without warranties of any kind</li>
+                <li>We do not guarantee uninterrupted or error-free operation</li>
+                <li>We are not liable for any direct, indirect, incidental, or consequential damages</li>
+            </ul>
+            <p>This includes, but is not limited to:</p>
+            <ul class="simple-list">
+                <li>Data loss</li>
+                <li>Academic or workplace reporting errors</li>
+                <li>Device malfunction or incompatibility</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 13. No Warranty -->
+        <div class="policy-section">
+            <h2>13. No Warranty</h2>
+            <p>LanTrack makes no warranties, express or implied, including:</p>
+            <ul class="simple-list">
+                <li>Fitness for a particular purpose</li>
+                <li>Accuracy of automated logs</li>
+                <li>Reliability of background processes</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 14. Termination -->
+        <div class="policy-section">
+            <h2>14. Termination</h2>
+            <p>We reserve the right to suspend or terminate access to the App if:</p>
+            <ul class="simple-list">
+                <li>You violate these Terms</li>
+                <li>The App is discontinued or deprecated</li>
+                <li>Required by law or security reasons</li>
+            </ul>
+            <p>You may stop using the App at any time by uninstalling it.</p>
+        </div>
+
+        <hr>
+
+        <!-- 15. Updates to Terms -->
+        <div class="policy-section">
+            <h2>15. Updates to Terms</h2>
+            <p>We may revise these Terms at any time.</p>
+            <ul class="simple-list">
+                <li>Updates will be reflected in-app or official documentation</li>
+                <li>Continued use of the App constitutes acceptance of updated Terms</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 16. Governing Law -->
+        <div class="policy-section">
+            <h2>16. Governing Law</h2>
+            <p>These Terms shall be governed by and interpreted in accordance with applicable laws of the Philippines, without regard to conflict of law principles.</p>
+        </div>
+
+        <hr>
+
+        <!-- 17. Severability -->
+        <div class="policy-section">
+            <h2>17. Severability</h2>
+            <p>If any provision of these Terms is found invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+        </div>
+
+        <hr>
+
+        <!-- 18. Contact Information -->
+        <div class="policy-section">
+            <h2>18. Contact Information</h2>
+            <p>For questions regarding these Terms:</p>
+            <p><strong>Developer:</strong> LanDecs (LanTrack Team)<br>
+            <strong>Email:</strong> <a href="mailto:landecs.org@gmail.com" class="contact-link">landecs.org@gmail.com</a></p>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-logo-link" aria-label="Go to homepage - LanTrack Logo">
+                <img class="footer-logo-img" src="https://eldrex.landecs.org/logo/lantrack_splash_icon.svg" alt="LanTrack / LanDecs Logo - Return to Home" loading="lazy">
+            </a>
+            <div class="footer-links">
+                <a href="/docs/privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a>
+                <span class="divider">|</span>
+                <a href="/docs/terms-and-conditions.html" aria-label="Terms and Conditions">Terms and Conditions</a>
+                <span class="divider">|</span>
+                <a href="/docs/license.html" aria-label="License">License</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const backBtn = document.getElementById('backBtn');
+        backBtn.addEventListener('click', () => {
+            if (document.referrer && document.referrer !== "") {
+                window.history.back();
+            } 
+        });
+
+        const termsLink = document.getElementById('termsFooterLink');
+        if (termsLink) {
+            termsLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+
+</html>
